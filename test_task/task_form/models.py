@@ -5,7 +5,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 class ModelForm(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя')
     email = models.EmailField(blank=True, verbose_name='Почта')
-    phone = PhoneNumberField(region="RU", blank=True)
+    phone = PhoneNumberField(region="RU", blank=True, verbose_name='Телефон')
     date = models.DateField(null=True, blank=True, verbose_name='Дата')
     text = models.TextField(blank=True, verbose_name='Информация')
 
